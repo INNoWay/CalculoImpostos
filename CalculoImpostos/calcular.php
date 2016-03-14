@@ -85,8 +85,10 @@
 		$porcent = "8%";	
 	}else if ($salario >= 1556.95 && $salario <= 2594.92){
 		$porcent = "9%";	
-	}else if ($salario > 2594.93){
+	}else if ($salario > 2594.93 && $salario <= 5189.81){
 		$porcent = "11%";	
+	}else if ($salario > 5189.82){
+		$porcent = "TETO";
 	}
 	return $porcent;
 	}
