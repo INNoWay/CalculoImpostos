@@ -20,6 +20,8 @@
 	$resultImpostoRendaPorcent = ImpostoRendaPorcent($resultInss);
 	$resultValorliquido = ValorLiquido($salario,$resultInssTotal,$resultImpostoRenda,$resultInss);
 		
+	$resultDesconto = $resultInssTotal + $resultImpostoRenda;
+	
     echo '<tr>';
 	echo '<td class=\"refDesc\">INSS</td>'; 
 	echo "<td class=\"refDesc\">{$resultInssporcet}</td>";
@@ -30,6 +32,10 @@
 	echo "<td class=\"refDesc\">{$resultImpostoRendaPorcent}</td>";
 	echo "<td class=\"refDesc\">{$resultImpostoRenda}</td>";
 	echo '</tr>'; 
+	echo '<tr>';		
+	echo '<td class=\"refDesc\" colspan="2">Total Descontado</td>';	
+	echo "<td class=\"refDesc\">{$resultDesconto}</td>";							
+    echo '</tr>';
 	echo '<tr>';		
 	echo '<td class=\"refDesc\" colspan="2">Valor Bruto</td>';	
 	echo "<td class=\"refDesc\">{$salario}</td>";							
