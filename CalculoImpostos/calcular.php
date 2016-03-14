@@ -15,7 +15,6 @@
 	
 	$resultInssTotal = InssTotal($salario);
 	$resultInss = Inss($salario);
-	$resultValorInss = InssTotal($salario);
 	$resultInssporcet = InssPorcent($salario);	
 	$resultImpostoRenda = ImpostoRenda($resultInss);
 	$resultImpostoRendaPorcent = ImpostoRendaPorcent($resultInss);
@@ -24,7 +23,7 @@
     echo '<tr>';
 	echo '<td class=\"refDesc\">INSS</td>'; 
 	echo "<td class=\"refDesc\">{$resultInssporcet}</td>";
-	echo "<td class=\"refDesc\">{$resultValorInss}</td>";	
+	echo "<td class=\"refDesc\">{$resultInssTotal}</td>";	
 	echo '</tr>'; 
 	echo '<tr>';
 	echo '<td class=\"refDesc\">IRRF</td>';
