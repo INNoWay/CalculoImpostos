@@ -1,0 +1,38 @@
+﻿<html>
+  <head>
+	  <title>Calculo De Salario</title>		
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="css/style.css" />
+	  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript">	  
+        $(document).ready(function(){
+			$("#calcular").click(function(){
+				$.post("calcular.php", {"valor": $("#valor").val()},
+					function(data){
+						$("#resultado").html(data);
+					}
+				);
+			});
+		});
+	  </script>	  
+  </head>
+<body>
+	<div id="content">	
+	<fieldset>
+	<center>		
+		<legend>Calculo Salário</legend>	
+		<br />
+		Valor R$ <input type="numeric" name="valor" id="valor" placeholder="Digite o Salário"/> 
+		<br />
+		<button id="calcular">Calcular</button> 	
+		<br />
+		<br />
+		<div id="resultado"></div>
+	</center>
+	</fieldset>
+	</div>
+	 <script type="text/javascript" src="js/slideshow.js"></script>
+  </body>
+</html>
