@@ -1,2 +1,2 @@
 # CalculoImpostos
-Desenvolvimento Web - Projeto para calcular impostos  
+Desenvolvimento Web - Calcular impostos  
